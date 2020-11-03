@@ -14,6 +14,7 @@
 </head>
 
 <body>
+
   <header>文学网站</header>
   <!--header和div类似容器，表示头部标签，具备语义化-->
   
@@ -24,31 +25,88 @@
   <p>1922年的春天，一个想要成名名叫尼克•卡拉威（托比•马奎尔Tobey Maguire 饰）的作家，离开了美国中西部，来到了纽约。那是一个道德感渐失，
   爵士乐流行，走私为王，股票飞涨的时代。为了追寻他的<span>美国梦</span>，他搬入纽约附近一海湾居住。</p>
   <!--span标签是个无语义标签可以单独设置使用-->
-  <p>菲茨杰拉德，二十世纪美国文学巨擘之一，兼具作家编剧双重身份。他以诗人的敏感和戏剧家的想象为"爵士乐时代"吟唱华丽挽歌，其诗人和梦想家的
+  <p>菲茨杰拉德，二十世纪美国文学巨擘之一，兼具<a href="https//www.baidu.com" title="百度网" target="_self">作家编剧</a>双重身份。他以诗人的敏感和戏剧家的想象为"爵士乐时代"吟唱华丽挽歌，其诗人和梦想家的
   气质亦为那个奢靡年代的不二注解。</p>
   <!--多个段落用多个p标签-->
+  <!--a标签用来设置链接，target属性有2个值，_self和_blank，_self表示从当前页面进入，_blank表示新页面进入-->
   </div>
+  
   <hr />
   <!--hr /表示添加分割线-->
+  
   <div>
   <h1>菊次郎的夏天</h1>
   <p>暑假到来，自幼丧父的小学三年级学生正男（关口雄介饰）。<br />如今和奶奶生活在一起，暑假特别无聊。&nbsp;&nbsp;他拿出母亲从外地寄回的信，准备自己一个人去爱知县丰桥市看望母亲。</p>
   <!--br /表示的是换行，&nbsp;表示空格。在HTML中空格和回车都是无用的-->
+  <img src="images/avatar/person.png" title="任务">
   </div>
+  
   <section>作者专栏</section>
   <!--section表示一个区域-->
+  
   <aside>aside表示的是一个侧边栏</aside>
+  
   <ul>
     <li>新闻标题一：以色列和巴勒斯坦统一</li>
     <li>新闻标题二：朝鲜和韩国统一</li>
   </ul>
   <!--ul-li标签表示新闻信息列表-->
+  
   <ol>
     <li>销量冠军</li>
     <li>销量亚君</li>
     <li>销量季军</li>
   </ol>
   <!--ol-li标签表示有序信息列表-->
-  <footer>copyright 2020/footer>
+  
+  <table border="2">
+  <caption>企业员工通讯录</caption>
+  <tr>
+  <th>姓名</th>
+  <th>电话</th>
+  <th>电子邮件</th>
+  <th>职位</th>
+  </tr>
+  <tr>
+  <td>关群峰</td>
+  <td>13641255896</td>
+  <td>12561245@qq.com</td>
+  <td>经理</td>
+  </tr>
+  <tr>
+  <td>李明</td>
+  <td>18978888546</td>
+  <td>guanqunfeng@hotmail.com</td>
+  <td>主管</td>
+  </tr>
+  </table>
+  <!--记忆方法table row,head,data-->
+  
+  <table border="1">
+    <caption>成绩表</caption>
+    <thead>
+        <th>科目</th>
+        <th>分数</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>语文</td>
+            <td>99</td>
+        </tr>
+        <tr>
+            <td>数学</td>
+            <td>80</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <td>总分</td>
+        <td>159</td>
+    </tfoot>
+    </table>
+  </table>
+  <!--这个主要用于上下固定，中间可滚动的表格-->
+  
+  <footer>copyright 2020</footer>
   <!--footer和div类似容器，表示尾部标签，具备语义化-->
+  
 </html>
