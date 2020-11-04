@@ -106,6 +106,75 @@
   </table>
   <!--这个主要用于上下固定，中间可滚动的表格-->
   
+  <form method="post" action="save.php">
+    <label for="username">用户名:</label>
+    <input type="text" name="username" value="">
+    <input type="submit" name="submitname" value="提交">
+    
+    <label for="pass">密码：</label>
+    <input type="password" name="pass" value="" placeholder="密码大于8位数">
+  </form>
+  
+  <form>
+    用户名：
+    <input type="text" name="myname" value="" placeholder="请输入用户名">
+    <br />
+    密码：
+    <input type="password" name="pass" value="" placeholder="请输入密码">
+    邮箱：
+    <input type="email" placeholder="输入内容中间必须有@">
+    准备上线时长：
+    <input type="number" placeholder="请输入整数">
+    准备登陆的网址：
+    <input type="url" placeholder="输入内容必须以http://或者https://开头">
+    请写下一段话：
+    <textarea rows="10" cols="50" placeholder="请在这里输入内容">我是文本域</textarea>
+  </form>
+  
+  <form action="save.php" method="post">
+        <label>你是否喜欢旅游？请选择：</label>
+        <br />
+        <input type="radio" value="1" name="prejudice" />
+        <label>喜欢</label>
+        <input type="radio" value="2" name="prejudice" />
+        <label>不喜欢</label>
+        <input type="radio" value="2" name="prejudice" />
+        <label>无所谓</label>
+    </form>
+    <form>
+        <label>您对那些运动感兴趣，请选择：</label>
+        <br />
+        <input type="checkbox" value="1" name="run" />
+        <label>跑步</label>
+        <input type="checkbox" value="1" name="ball" />
+        <label>打球</label>
+        <input type="checkbox" value="1" name="hike" />
+        <label>登山</label>
+        <input type="checkbox" value="1" name="fitness" />
+        <label>健美</label>
+        <input type="checkbox" value="1" name="other" checked="checked" />
+        <label>以上可多选</label>
+    </form>
+    
+    <form>
+        <select>
+            <option value="reading">看书</option>
+            <option value="shopping">购物</option>
+            <option value="music">听音乐</option>
+            <option value="fitness">锻炼</option>
+        </select>
+    </form>
+    
+    <!--label标签是用来方便确定输入框的内容,for属性的值要和input中name的属性值一致-->
+    <!--input输入框的type属性值可以为：text，password，submit,reset，email，number，url,radio,checkbox-->
+    <!--输入框中placeholder属性为占位符，一般用于提醒输入者-->
+    <!--当type属性为submit时，该文本框为提交按钮，value值为按钮的名字-->
+    <!--当type属性为reset时，该文本框为重置按钮，value值为按钮的名字-->
+    <!--<textarea></textarea>为输入的文本域，可以设置rows行数和cols列数-->
+    <!--radio单选框,选项的name值必须一致-->
+    <!--checkbox复选框，选项的name值必须不一致-->
+    <!--select标签用于创建下拉列表，列表选项用option标签创建，默认选项用selected设置，设置option的value属性的值，向服务器提交的值-->
+    
   <footer>copyright 2020</footer>
   <!--footer和div类似容器，表示尾部标签，具备语义化-->
   
