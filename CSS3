@@ -60,8 +60,18 @@ key2:value2;
     }
     h7{ /*样式的继承，某些样式比如颜色，使用在标签上时，标签内的所有子标签都生效，但是某些样式比如外边框，却无法生效*/
       color:green;
+      background-color:pink; /*设置背景颜色，行内元素和块状元素均可设置*/
     }
     </style>
+    li{
+      border:1px doted #ccc; /*这是简写形式，也可以写成，border-width，border-style（边框样式一般有dashed虚线,dotted点线,solid实线），border-color*/
+      width:200px;
+      height:80px;
+      border-radius:20px 10px 15px 30px; /*按照Z形依次设置圆角大小，也可以单独设置border-top-left-radius，其他方向以此类推。border-radius:20px设置全部一样，border-radius:20px
+      10px 设置对角线，参数也可以为百分比*/
+      padding-left:5px;/*其他方向类似设置填充，两个参数，说明上下 和 左右*/
+      margin-left:20px;/*其他方向类似设置到边界举例，两个参数，说明上下 和 左右*/
+    }
     
     <link href="main.css" rel="stylesheet" type="text/css" /> /*外联式CSS样式
 </head>
@@ -83,6 +93,9 @@ key2:value2;
     <h6>慕课网的改变</h6>
     <h7>慕课网是一个非常好用的<span>技术学习型网站</span>，值得大家去使用。</h7>
     <p>以上所有内容来源于<a href="https://www.baidubaike.com">百度</a>百科网站！</p>
+    <ul>
+      <li>这是列表第一项</li>
+    </ul>
 </body>
 
 </html>
@@ -103,9 +116,13 @@ h1{
 */
 /*块状元素：每个块级元素都从新的一行开始，并且其后的元素也另起一行。元素的高度、宽度、行高以及顶和底边距都可设置。元素宽度在不设置的情况下，是它本身父容器的100%（和父元素的宽度一致）
 ，除非设定一个宽度。*/
+/*块状元素相当于是一个盒子，盒子到边界用margin，盒子的边框用border，盒子到内容距离用padding，内容的距离用width和height，各个方向用left,right,bottom,top*/
 /*内联元素：和其他元素都在一行上；元素的高度、宽度及顶部和底部边距不可设置；元素的宽度就是它包含的文字或图片的宽度，不可改变。*/
 /*内联块状元素：和其他元素都在一行上；元素的高度、宽度、行高以及顶和底边距都可设置。*/
 /*隐藏元素标签：display:none;*/
+/*CSS3包含3种基本的布局模型，用英文概括为：Flow（流动模型）、Layer（浮动模型） 和 Float（层模型，可以让块状元素同行显示，设置float:left;）。*/
+/*层模型有三种形式：1、绝对定位(position: absolute)2、相对定位(position: relative)3、固定定位(position: fixed)*/
+
 
 
 
