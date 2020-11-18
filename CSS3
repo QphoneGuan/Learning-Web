@@ -54,7 +54,7 @@ key2:value2;
     /*也可以写作p>span{}*/
       border:1px red solid;
     }
-    .first span{ /*后代选择器，意思为：给某个类为first的元素的所有span标签添加如下样式*/
+    .first span{ /*后代选择器，意思为：给某个类为first的元素内的所有span标签添加如下样式*/
     /*也可以写作p span{}*/
       border:1px blue solid;
     }
@@ -71,6 +71,22 @@ key2:value2;
     h7{ /*样式的继承，某些样式比如颜色，使用在标签上时，标签内的所有子标签都生效，但是某些样式比如外边框，却无法生效*/
       color:green;
       background-color:pink; /*设置背景颜色，行内元素和块状元素均可设置*/
+    }
+    .fle1{
+      width:500px;
+      height:500px;
+      background:blue;
+      display:flex;
+    }
+    .fle2{
+      width:100px;
+      height:100px;
+      background:red;
+    }
+    .fle3{
+      width:100px;
+      height:100px;
+      background:yellow;
     }
     </style>
     li{
@@ -110,6 +126,19 @@ key2:value2;
       <img src="http://img.mukewang.com/541a7d8a00018cf102000200.jpg">
       <div id="abso">这是一段对于图片的文字描述</div>
     </div>
+    
+    <div class="fle1"> 
+    /*当fle1设置了弹性盒子时，即display:flex;时，其包含的子元素将在一排显示，默认为从左往右依次排列,且和父元素左边没有间隙；*/
+    /*当fle1设置了弹性盒子内的横轴排列方式时，即左对齐justify-content:flex-start;右对齐justify-content:flex-end;居中justify-content:center;两端对齐中间等间隔justify-content:
+    space-between;间隔相等justify-content:space-around;*/
+    /*当fle1设置了弹性盒子内的纵轴排列方式时，即上对齐align-items:flex-start;下对齐align-items:flex-end;居中align-items:center;首行文字基线对齐align-items:baseline;
+    伸展整个高度align-items:stretch;*/
+      <div class="fle2"></div>
+    /*当给子元素设置flex值时，表示设置了横轴占比，此时宽度设置失效，例如flex:2;*/
+      <div class="fle3">文本如何展示的方法</div>
+    /*当给容器内的行内元素设置居中位置时，文本元素可以通过text-align:center;来设置,定宽块状元素可以使用margin:20px auto;也就是设置左右为自动即可*/
+    </div>
+    
 </body>
 
 </html>
