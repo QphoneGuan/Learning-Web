@@ -15,8 +15,14 @@
 
 <body>
 
-  <header role="banner">文学网站</header> <!--role的作用是告诉浏览器，这是个啥-->
+  <header role="banner">文学网站</header> <!--role的作用是告诉浏览器，这是个轮播图-->
   <!--header和div类似容器，表示头部标签，具备语义化-->
+  <nav> <!--nav表示导航标签，具备语义化-->
+    <a href="https://www.baidu.com">首页</a>
+    <a href="https://www.google.com">组织架构</a>
+    <a href="https://www.360.com">联系我们</a>
+  </nav>
+  
   
   <div>
   <!--div是个容器，让网页可以模块化显示-->
