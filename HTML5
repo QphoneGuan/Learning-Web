@@ -6,6 +6,8 @@
 <head>
     <meta charset="UTF-8">
     <title>学习HTML课程</title>
+    <link rel="icon" type="image/x-icon" href="motor.ico">
+    <!--通过link可以设置web在浏览器打开后网址旁边的小图标，来源为ico格式，一般大小16px*16px-->
     <style>
     span{
     color:blue;
@@ -55,6 +57,59 @@
 	<p>收件人：<ruby>上饶桭<rt>chen</rt>炜<rt>wei</rt></ruby></p>
   <!--cite引用斜体显示，q引用加双引号，blockquote缩进显示-->
   <!--u标签加下划线，Mark标签高亮显示，progress进度条显示，meter刻度进度条显示，address地址斜体显示，bdo文本左右方向可设置参数dir="ltr"或"rtl"，wbr端点换行（和br类似，不需要结束标签），ruby搭配rt标签使用，为拼音注释-->
+  
+<picture>
+	<source media="(min-width:1080px)" srcset="C:\Users\Administrator\Desktop\汽车.png">
+	<source media="(min-width:650.px)" srcset="C:\Users\Administrator\Desktop\货车.png">
+	<img src="C:\Users\Administrator\Desktop\123.jpg">
+</picture>
+<!--响应视图大小，默认显示123图片，当视图宽度大于650，显示货车图片，当视图宽度大于1080显示汽车图片-->
+
+<picture>
+	<source type="image/png" srcset="C:\Users\Administrator\Desktop\汽车.png">
+	<img src="C:\Users\Administrator\Desktop\汽车.jpg">
+</picture>
+<!--响应图片格式，默认显示汽车jgp，如果存在汽车png的话就响应png-->
+
+<picture>
+	<source media="(min-width:100000px)" srcset="C:\Users\Administrator\Desktop\汽车.png 2x">
+	<img src="C:\Users\Administrator\Desktop\汽车.jpg">
+</picture>
+<!--响应像素密度，默认显示汽车jgp，如果满足条件就显示png的2倍像素-->
+
+<picture>
+	<source media="(orientation:portrait)" srcset="C:\Users\Administrator\Desktop\汽车.png">
+	<source media="(orientation:landscape)" srcset="C:\Users\Administrator\Desktop\motor.ico">
+	<img src="C:\Users\Administrator\Desktop\汽车.jpg">
+</picture>
+<!--响应屏幕方向，orientation设置portrait为竖屏，landscape为横屏-->
+
+<picture>
+	<img width="500"src="C:\Users\Administrator\Desktop\汽车.jpg" srcset="C:\Users\Administrator\Desktop\货车.png 3x,C:\Users\Administrator\Desktop\motor.ico 5x">
+</picture>
+<!--自适应像素比，根据设备的像素比，显示不一样的图片-->
+
+<embed src="C:\Users\Administrator\Desktop\music.mp3" width="500" height="100" autostart="true" loop="infinite"></embed>
+<!--embed用于嵌入多媒体-->
+
+<object name="video" height="300" width="300" hidden="true" type="image/jpeg" data="C:\Users\Administrator\Desktop\汽车.jpg" >123</object>
+<!--embed用于嵌入对象-->
+
+<audio autoplay="true" loop="infinite" src="C:\Users\Administrator\Desktop\music.mp3" controls="controls">
+	<source src="C:\Users\Administrator\Desktop\music.ogg" type="audio/ogg">
+	<source src="C:\Users\Administrator\Desktop\music.mp3" type="audio/mpeg">
+	您的浏览器不支持audio控件
+</audio>
+<!--插入声音控件-->
+
+<video autoplay="true" loop="infinite" src="C:\Users\Administrator\Desktop\video.mp4" controls="controls">
+	<source src="C:\Users\Administrator\Desktop\music.avi" type="audio/avi">
+	<source src="C:\Users\Administrator\Desktop\music.mp4" type="audio/mpeg">
+	您的浏览器不支持audio控件
+</video>
+<!--插入视频控件-->
+
+
   <div id="maths">
     <h1>解一元二次方程</h1>
     <p>一元二次方程求解有四种方法：</p>
@@ -83,6 +138,12 @@
   <!--span标签是个无语义标签可以单独设置使用-->
   <p>菲茨杰拉德，二十世纪美国文学巨擘之一，兼具<a href="https//www.baidu.com" title="百度网" target="_self">作家编剧</a>双重身份。他以诗人的敏感和戏剧家的想象为"爵士乐时代"吟唱华丽挽歌，其诗人和梦想家的
   气质亦为那个奢靡年代的不二注解。</p>
+  <figure>
+  <img src="C:\Users\Administrator\Desktop\123.jpg" alt="对不起图片无法打开" />
+  <figcaption>图片欣赏</figcaption>
+  </figure>
+  <!--图片参数src指明来源，alt表示图片源无法找到时，显示的替代文字-->
+  <!--figure标签用来定义独立的流媒体块，例如pic,table,img,code等等，figcaption设置流的标题-->
   <!--多个段落用多个p标签-->
   <!--a标签用来设置链接，target属性有2个值，_self和_blank，_self表示从当前页面进入，_blank表示新页面进入-->
   </div>
