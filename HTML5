@@ -12,6 +12,9 @@
     span{
     color:blue;
     }
+	ul{
+			list-style-type: circle;
+		}
     </style>
 </head>
 
@@ -129,6 +132,39 @@
 </div>
 <!--b表示加粗，i表示斜体，sup表示上标，sub表示下标，big加大字号，small减小字号-->
   
+  	<a href="https://www.baidu.com" target="_blank">百度一下</a>
+	<!--普通链接-->
+	<a href="https://www.360.com">
+		<h1>启航运输</h1>
+		<p>启航是一家专业的汽车物流公司！</p>
+		<img src="C:\Users\Administrator\Desktop\汽车.jpg">
+	</a>
+	<!--块链接-->
+		<p><a href="#h3">查看启航助手</a></p>
+		<h1>启航运输</h1>
+		<p>启航是一家专业的汽车物流公司！</p>
+		<h2>运车宝</h2>
+		<p>启航运输宝用于驾驶员运输信息共享！</p>
+		<h3 id="h3">启航助手</h3>
+		<p>启航助手可以查询发票等信息！</p>
+	<!--锚点链接-->
+	<a href="C:\Users\Administrator\Desktop\货车.png">看看货车</a> 
+	<a href="C:\Users\Administrator\Desktop\启航.docx">启航word文档</a> 
+	<a href="#">空链接</a>
+	<a href="javascript:alert(1)">执行js脚本</a>
+	<!--目标链接-->
+	<a href="mailto:1974707103@qq.com?subject=name">给1974发邮件</a>
+	<!--邮件链接-->
+	<a href="C:\Users\Administrator\Desktop\货车.png" download>货车照片下载</a>
+	<!--下载链接-->
+	<img src="C:\Users\Administrator\Desktop\china.jpg" usemap="#Map" width="618" height="499" border="0"> 
+	<map name="Map">
+		<area shape="circle" coords="221,261,40" href="show.php?name=青海">
+	</map>
+	<!--图像热点，shape可以选择circle，rect，poly-->
+	<iframe src="https://www.tencent.com"></iframe>
+	<!--嵌入框架链接-->
+  
   <div>
   <!--div是个容器，让网页可以模块化显示-->
   <h1>了不起的盖茨比</h1> 
@@ -177,6 +213,54 @@
   </ol>
   <!--ol-li标签表示有序信息列表-->
   </article>
+  
+  <ul>
+		<li>姓名</li>
+		<li>电话</li>
+		<li>地址</li>
+	</ul>
+	<!--无序列表-->
+	<ol type="1" start="4" reversed>
+		<li>驾龄</li>
+		<li>执照类型</li>
+		<li>年检日期</li>
+	</ol>
+	<!--有序列表-->
+	<br>
+	<ol>
+		<li>主车
+		<ul>
+			<li>主车牌照</li>
+			<li>主车车架号</li>
+		</ul>
+		</li>
+		<li>挂车牌照</li>
+		<li>挂车车架号</li>
+	</ol>
+	<!--有序和无序嵌套列表-->
+	<br>
+	<dl>
+		<dt>经销商</dt>
+		<dd>店名</dd>
+		<dd>电话</dd>
+		<dt>物流商</dt>
+		<dd>名称</dd>
+		<dd>代号</dd>
+	</dl>
+	<br>
+	<!--描述列表-->
+	<img src="C:\Users\Administrator\Desktop\汽车.jpg"  contextmenu="deg">
+	<menu id="deg" type="context" label="旋转">
+		<menuitem icon="C:\Users\Administrator\Desktop\motor.ico">左转90度</menuitem>
+		<menuitem>右转90度</menuitem>
+	</menu>
+	<!--右击菜单列表-->
+	<menu label="文件">
+		<li>保存</li>
+		<li>新建</li>
+		<li>退出</li>
+	</menu>
+	<!--菜单列表，类似无序列表-->
   
   <table border="2">
   <caption>企业员工通讯录</caption>
