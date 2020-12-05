@@ -309,6 +309,156 @@
   </table>
   <!--这个主要用于上下固定，中间可滚动的表格-->
   
+  <table>
+		<caption>运输数量统计表</caption>
+		<thead>
+			<th>车牌号</th>
+			<th>驾驶员</th>
+			<th>承运单位</th>
+		</thead>
+		<tbody>
+			<tr>
+			<td>赣H86593</td>
+			<td>吴事保</td>
+			<td>景德镇启航</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<td>统计</td>
+			<td>审批</td>
+			<td>合规</td>
+		</tfoot>
+	</table>
+	<!--表格行分组-->
+	<table>
+		<caption>运输数量统计表</caption>
+		<colgroup>
+			<col>
+			<col span="2">
+		</colgroup>
+		<tr>
+			<th>车牌号</th>
+			<th>驾驶员</th>
+			<th>承运单位</th>
+		</tr>
+		<tr>
+			<td>赣H86593</td>
+			<td>吴事保</td>
+			<td>景德镇启航</td>
+		</tr>
+		<tr>
+			<td>统计</td>
+			<td>审批</td>
+			<td>合规</td>
+		</tr>
+	</table>
+<!--表格列分组，利用span属性设置几列为一组-->
+	<table border="10"  frame="void"  cellpadding="6" cellspacing="20"   summary="表格使用方法">
+		<tr>
+			<td>车架号</td>
+			<td>马力</td>
+			<td>载重质量</td>
+		</tr>
+		<tr>
+			<td>LNNA56JK58F862359</td>
+			<td>300</td>
+			<td>15吨</td>
+		</tr>
+	</table>
+<!--单元格分离-->
+<!--border属性定义外边框大小，frame指定那部分外边框可见，cellpadding指定内容到单元格距离，cellspacing指定格与格之间距离，summary确定表格表述，方便搜索引擎搜索-->
+<table border="1" rules="all">
+		<tr>
+			<td>车架号</td>
+			<td>马力</td>
+			<td>载重质量</td>
+		</tr>
+		<tr>
+			<td>LNNA56JK58F862359</td>
+			<td>300</td>
+			<td>15吨</td>
+		</tr>
+	</table>
+<!--细线表格,通过rules属性为all，确定内边框线哪部分可见-->
+<table border="1" rules="all">
+		<tr>
+			<td rowspan="2">车架号</td>
+			<td>马力</td>
+			<td>载重</td>
+		</tr>
+		<tr>
+			<td>LNNA56JK58F862359</td>
+			<td>15吨</td>
+		</tr>
+	</table>
+<!--合并单元格显示，colspan跨列合并，rowspan跨行合并-->
+<table>
+	<tr>
+		<td>&nbsp;</td>
+		<td scope="col">姓名</td>
+		<td scope="col">年龄</td>
+	</tr>
+	<tr>
+		<td scope="row">1</td>
+		<td>关群峰</td>
+		<td>30</td>
+	</tr>
+</table>
+<!--指定表格的行列表头-->
+<table>
+	<tr>
+		<td id="num">&nbsp;</td>
+		<td id="name">姓名</td>
+		<td id="age">年龄</td>
+	</tr>
+	<tr>
+		<td headers="num">1</td>
+		<td headers="name">关群峰</td>
+		<td headers="age">30</td>
+	</tr>
+</table>
+<!--为单元格绑定表头-->
+<table>
+	<tr>
+		<td axis="num">序号</td>
+		<td axis="call">全称</td>
+	</tr>
+	<tr>
+		<td axis="num">1</td>
+		<td abbr="HTML" axis="html" axis="call">Hypertext Markup Language</td>
+	</tr>
+	<tr>
+		<td axis="num">2</td>
+		<td abbr="CSS" axis="call">Cascading Style Sheets</td>
+	</tr>
+</table>
+<!--abbr定义信息缩写；axis属性用于单元格分类，都是便于搜索引擎搜索-->
+<table border="1" rules="all">
+		<caption>人口统计表</caption>
+		<tr>
+			<td rowspan="2" colspan="2">人口调查</td>
+			<td rowspan="2">所有人</td>
+			<td colspan="2">性别</td>
+		</tr>
+		<tr>
+			<td>男</td>
+			<td>女</td>
+		</tr>
+		<tr>
+			<td rowspan="2">全部区域</td>
+			<td>北片</td>
+			<td>3333</td>
+			<td>1111</td>
+			<td>2222</td>
+		</tr>
+		<tr>
+			<td>南片</td>
+			<td>3333</td>
+			<td>1111</td>
+			<td>2222</td>
+		</tr>
+	</table>
+  
   <form method="post" action="save.php">
     <label for="username">用户名:</label>
     <input type="text" name="username" value="">
