@@ -527,6 +527,134 @@
     <!--radio单选框,选项的name值必须一致-->
     <!--checkbox复选框，选项的name值必须不一致-->
     <!--select标签用于创建下拉列表，列表选项用option标签创建，默认选项用selected设置，设置option的value属性的值，向服务器提交的值-->
+	
+	<form>
+		请输入账号：<input type="text" name="user_num" placeholder="请输入六位数字" pattern="[0-9]{6}"><br>
+		<input type="submit" name="提交"><!--提交按钮-->
+		<input type="reset" name="重置"><!--重置按钮-->
+		<input type="image" name="提交"><!--图像按钮-->
+	</form>
+<!--普通输入表单，type用于指定表单类型，name为名称，placeholder为占位符用于提示信息，pattern用于指定输入格式-->
+<!--type类型有：email,url,number,text,button,checkbox,file,hidden,image,password,radio,reset,submit等等-->
+<!--input输入控件除了常用的属性name和value外，还有readonly只读,diabled禁用,require必填,checked,selected,autofocus自动聚焦,multiple多选,autocomplete自动关联等等属性-->
+
+	<form>
+		<table>
+			<tr>
+				<td><label>姓名</label></td>
+				<td><input type="text" name="name" tabindex="1"></td>
+			</tr>
+			<tr>
+				<td><label>密码</label></td>
+				<td><input type="password" name="pasw"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><button tabindex="-1">提交</button></td>
+			</tr>
+		</table>
+	</form>
+<!--表格表单，tabindex当 tab 键用于导航时,规定元素的 tab 键控制次序-->
+
+	<form>
+		<label>账户：</label>
+		<input type="text" name="account"><br>
+	</form>
+		<!--文本框-->
+	<form>
+		<label>密码：</label>
+		<input type="password" name="passw"><br>
+	</form>
+		<!--密码框-->
+	<form>
+		<label>隐藏域：</label>
+		<input type="hidden" name="hiddenarea" value="这是一个秘密"><br>
+	</form>
+		<!--隐藏域-->
+	<form action="\files\upload" method="post">
+		<label>文件域：</label>
+		<input type="file" name="filearea" multiple="multiple">
+	</form>
+		<!--文件域, action 属性规定当提交表单时，向何处发送表单数据。method属性规定如何发送表单数据，设置multiple可以上传多个文件-->
+
+	<form>
+		<textarea cols="20" rows="4" wrap="soft">这是多行文本框</textarea>
+	</form>
+	<!--多行文本框，cols和rows用来确定行宽和高，wrap属性用于文本是否包含换行符，soft表示文本不换行，hard表示文本换行-->
+
+	<form>
+		你最喜欢的运动是：<br>
+		<input type="radio" name="sport"><label >足球</label><br>
+		<input type="radio" name="sport"><label>滑雪</label><br>
+		<input type="radio" name="sport"><label>长跑</label>
+	</form>
+	<!--单选框，type为radio，所有选项的name值必须一致-->
+	<form>
+		车辆行驶过程中需要注意的有（多选）：<br>
+		<input type="checkbox" name="attention"><label>树枝</label><br>
+		<input type="checkbox" name="attention2"><label>疲劳驾驶</label><br>
+		<input type="checkbox" name="attention3"><label>视线盲区</label>
+	</form>
+	<!--复选框，type为checkbox，通过label中的for绑定name属性的值-->
+	<form>
+		<label for="season">您的出生季节为：</label>
+		<select name="season">
+			<option value="spring">春</option>
+			<option value="summer">夏</option>
+			<option value="autumn">秋</option>
+			<option value="winter">冬</option>
+		</select>
+	</form>
+	<!--选项框，通过<select><option>标签设置下拉的选项-->
+
+	<form>
+		请输入网址：
+		<input type="url" name="weblink" list="url_list">
+		<datalist id="url_list">
+			<option label="百度" value="http://www.baidu.com" />
+			<option label="腾讯" value="http://www.tencent.com" />
+			<option label="360" value="http://www.360.com" />
+		</datalist>
+	</form>
+	<!--关联数据列表，常用于搜索，通过input的list属性值和datalist属性id值一致-->
+	<form>
+		请输入用户名：<input type="text" name="user_name"><br>
+		请选择密码强度：<keygen name="security" /><br>
+		<input type="submit" name="提交">
+	</form>
+	<!--密码对生成器-->
+	<form>
+		两位数的乘积为：<output name="result"></output>
+	</form>
+	<!--通过js脚本获取数字的结果，并输出-->
+	<form>
+		<fieldset>
+			<legend>您经常使用的聊天工具是：</legend><br>
+			<input type="radio" name="tool">
+			<label for="tool">微信</label>
+			<input type="radio" name="tool">
+			<label for="tool">微博</label>
+		</fieldset>
+	</form>
+	<!--通过fieldset标签将表单内容的一部分打包，生成一组相关表单的字段。浏览器会以特殊方式来显示它们，它们可能有特殊的边界、3D 效果等-->
+	<form novalidate="true">
+		请输入电子邮件：<input type="email" name="youjian">
+		<input type="submit" name="提交">
+	</form>
+	<!--表单属性novalidate用来关闭输入类型的验证-->
+	<form id="form1">
+		请输入姓名：<input type="text" name="user_name" autofocus="on">
+		<input type="submit" name="提交">
+	</form>
+	<p>请输入：<input type="text" form="form1"></p>
+	<!--通过input中的form属性的值，和form中id属性的值相等相互关联起来，两者同时提交到服务器-->
+	<!--设置autofocus="on"可以让光标聚焦到该标签-->
+	<form action="1.php" method="post" enctype="multipart/form-data" target="_self">
+		请输入邮件地址：<input type="email" name="user1"><br>
+		<input type="submit" name="提交到页面1" formaction="1.asp">
+		<input type="submit" name="提交到页面1" formaction="2.asp">
+		<input type="submit" name="提交到页面1" formaction="3.asp">
+	</form>
+	<!--表单属性重写，这里展示了重写action，其它属性类似-->
     
   <footer>copyright 2020</footer>
   <!--footer和div类似容器，表示尾部标签，具备语义化-->
