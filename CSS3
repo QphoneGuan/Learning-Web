@@ -88,7 +88,6 @@ key2:value2;
       height:100px;
       background:yellow;
     }
-    </style>
     li{
       border:1px doted #ccc; /*这是简写形式，也可以写成，border-width，border-style（边框样式一般有dashed虚线,dotted点线,solid实线），border-color*/
       width:200px;
@@ -98,6 +97,16 @@ key2:value2;
       padding-left:5px;/*其他方向类似设置填充，两个参数，说明上下 和 左右*/
       margin-left:20px;/*其他方向类似设置到边界举例，两个参数，说明上下 和 左右*/
     }
+    </style>
+    <!--
+    <style>
+    @import url(wailian.css);
+    @import url(link.css);
+    /*以上通过import方法也可以导入外部样式表。也可以在外部样式表中使用import方法。*/
+    </style>
+    
+    -->
+    
     
     <link href="main.css" rel="stylesheet" type="text/css" /> /*外联式CSS样式
 </head>
@@ -151,7 +160,7 @@ h1{
 /*优先级(就近原则)：内联式>嵌入式>外联式*/
 /*id选择器和类选择器的区别在于，类选择器在一个HTML文档中可以用于多次多个标签中，但是id选择器在一个HTML文档中只可以用一次一个标签；而且类选择器可以使用词列表方法为一个元素同时设置多个样式。*/
 /*举例：<h1 class="hello world">hello,world</h1>，使用id="hello world"就没有任何变化*/
-/*优先级：内联样式>ID选择器>类选择器>标签选择器>通配符选择器；优先级的确定可以使用权值计算，标签样式权值为1，类选择器权值为10，id选择器权值为100，依次类推后代选择器权值就是2*/
+/*优先级：内联样式>ID选择器>类选择器>标签选择器>通配符选择器；优先级的确定可以使用权值计算，标签样式权值为1，类选择器权值为10，id选择器权值为100，依次类推后代选择器权值就是2。如果加权值相等，那就就近原则。*/
 /*我们可以设置选择器的最高层级，例如：p{color:green!important;}，表明这个优先层级最高*/
 /*标签元素大体被分为三类：1，块状元素，例如<div>、<p>、<h1>...<h6>、<ol>、<ul>、<dl>、<table>、<address>、<blockquote> 、<form>。可以通过display:inline的方式将块状元素变成内联元素。
 2，内联元素，例如<a>、<span>、<br>、<i>、<em>、<strong>、<label>、<q>、<var>、<cite>、<code>，可以通过display:block的方式将内联元素变成块状元素。
@@ -170,7 +179,73 @@ h1{
 保留不动。*/
 /*但它的相对移动的坐标是视图（屏幕内的网页窗口）本身。由于视图本身是固定的，它不会随浏览器窗口的滚动条滚动而变化，除非你在屏幕中移动浏览器窗口的屏幕位置，或改变浏览器窗口的显示大小，因此固定定位
 的元素会始终位于浏览器窗口内视图的某个位置，不会受文档流动影响*/
+/*CSS具有继承性，父样式大部分（主要指字体，文本等属性）会继承给子样式和孙样式，*/
+/*CSS具有层叠性，对同一个标签设置了多重样式，就有优先级的区别，标签选择器权值为1，类选择器权值为10，id选择器权值为100，可以通过!important设置最高级别*/
+/*基础选择器分为：1，标签选择器（p{}）；2，类选择器(.st{})；3，ID选择器（#st{}）以上基本选择器可以进行组合成复合选择器*/
+/*
+复合选择器：
+1，包含选择器（第一个选择器 空格 第二个选择器{}），举例：.head p{}，拥有head类选择器标签内包含的所有p标签的样式；
+2，子选择器（第一个选择器 > 第二个选择器{}），举例：.head>p{}，拥有head类选择器标签内子元素为p标签的样式；
+3，相邻选择器（第一个选择器 + 第二个选择器{}），举例：h3+p{},两个相邻的独立标签h3和p设置同样样式,，顺序不能错；
+4，兄弟选择器（第一个选择器 ~ 第二个选择器{}），举例：h3~p{}，同级别的h3标签和p标签设置同样样式；
+5，属性选择器（举例如下）
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>格式</title>
+	<style type="text/css">
+		a[href]{
+			background-color: #009966;
+		}/*指定属性名的标签*/
+		input[type=text]{
+			background-color:#CC6633;
+	}/*指定属性值的标签*/
+		[class~=first]{
+			background-color:yellow;
+	}/*包含first，后为空白，的类选择器的标签*/
+		[class^=first]{
+			background-color:green;
+	}/*前缀为first，后面无所谓的类选择器的标签*/
+		[class$=first]{
+			background-color:pink;
+	}/*后缀为first，前面无所谓的类选择器的标签*/
+		[class*=first]{
+			background-color:pink;
+	}/*只要包含first的类选择器的标签*/
+		[class|=first]{
+			background-color:pink;
+	}/*first为前缀且后面为连字符的类选择器的标签*/
+	</style>
+</head>
 
+<body>
+	<p><a href="http://www.baidu.com">百度网</a></p>
+	<p><a name="anchor">无href属性</a></p>
+	<p>
+		<input type="text" name="a">
+		属性值为text
+	</p>
+	<p>
+		<input type="textarea" name="a">
+		属性值不为text
+	</p>
+	<ul>
+		<li class="first">属性选择器1</li>
+		<li class="second">属性选择器2</li>
+		<li class="third">属性选择器3</li>
+		<li class="first second">属性选择器4</li>
+		<li class="first third">属性选择器5</li>
+		<li class="second third">属性选择器6</li>
+		<li class="first-second">属性选择器7</li>
+		<li class="first-third">属性选择器8</li>
+		<li class="second-third">属性选择器9</li>
+		<li class="first-second-third">属性选择器10</li>
+		<li class="third-second-first">属性选择器11</li>
+	</ul>>
+</body>
+</html>
+*/
 
 
 
