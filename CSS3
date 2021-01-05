@@ -363,3 +363,82 @@ h1{
 </div>
 </body>
 </html>
+10，目标伪类选择器
+通过设置各类状态，例如visited（访问），hover（鼠标滑过），focus（焦点），active（触发）等的样式
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>格式</title>
+	<style type="text/css">
+		div:target{background-color: blue} /*当浏览器中域名后面加入#blue或者#red，则该样式为id为blue或者red的标签添加样式*/
+	</style>
+</head>
+
+<body>
+<div id="red">盒子1</div>
+<div id="blue">盒子2</div>
+</body>
+</html>
+11，动态伪类选择器
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>格式</title>
+	<style type="text/css">
+		input[type="submit"] {
+			margin-left:4.2em;
+			border:solid 1px; 					
+			padding: 0.5em 3em; 					
+			color: #444; 						
+			background: #f99; 						
+			border-color: #fff #aaab9c #aaab9c #fff; 
+			zoom:1; 
+		}   
+		input[type="submit"]:hover { /*设置鼠标滑过时的样式*/
+    		color: #800000; 						
+    		background: transparent; 				
+    		border-color: #aaab9c #fff #fff #aaab9c; 
+    	}
+	</style>
+</head>
+
+<body>
+<div>
+	<form>
+		<input type="submit" name="提交">
+	</form>
+</div>
+</body>
+</html>
+12，伪对象选择器
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>格式</title>
+	<style type="text/css">
+		p:first-letter{
+			color: red;
+		}
+		p:first-line{
+			font-size: 24px;
+		}
+		p:before{
+			content: "柳永";
+		}
+	</style>
+</head>
+
+<body>
+<div>
+	<P>衣带渐宽终不悔</P>
+</div>
+</body>
+</html>
+
+
+
+
+
