@@ -437,8 +437,48 @@ h1{
 </div>
 </body>
 </html>
+13，选择器使用案例
+<!DOCTYPE html>
+<html>
+<head>
+	<title>百度文库下载列表</title>
+	<style type="text/css">
+		a[href^="https"]{
+			text-decoration: none;
+			padding-left: 24px;
+		}
+		a[href$="pdf"]{
+			background: url(images/pdf.jpg) no-repeat left center;
+		}
+		a[href$="doc"]{
+			background: url(images/doc.jpg) no-repeat left center;
+		}
+		a[href$="xls"]{
+			background: url(images/xls.jpg) no-repeat left center;
+		}
+		a[href$="txt"]{
+			background: url(images/txt.jpg) no-repeat left center;
+		}
+		a[href$="ppt"]{
+			background: url(images/ppt.jpg) no-repeat left center;
+		}
+		span{
+			display: block;
+			padding-left: 24px;
+			color: #ccc;
+			font-size: 12px;
+		}
+	</style>
+</head>
 
-
-
-
-
+<body>
+	<div>
+		<p><a href="https://www.baidu.com/name.pdf">移动互联网</a><span><img src="images/star1.jpg">&nbsp&nbsp&nbsp41页&nbsp&nbsp3个财富值</span></p>
+		<p><a href="https://www.baidu.com/name.doc">数字经济的优势和劣势</a><span><img src="images/star1.jpg">&nbsp&nbsp&nbsp33页&nbsp50个财富值</span></p>
+		<p><a href="https://www.baidu.com/name.xls">论中国</a><span><img src="images/star1.jpg">&nbsp&nbsp&nbsp24页&nbsp10个财富值</span></p>
+		<p><a href="https://www.baidu.com/name.txt">诗人李白的一生</a><span><img src="images/star1.jpg">&nbsp&nbsp&nbsp80页&nbsp4个财富值</span></p>
+		<p><a href="https://www.baidu.com/name.ppt">书评：你当象鸟飞往你的山</a><span><img src="images/star1.jpg">&nbsp&nbsp&nbsp12页&nbsp1个财富值</span></p>
+	</div>
+</body>
+</html>
+*/
