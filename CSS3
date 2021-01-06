@@ -482,3 +482,32 @@ h1{
 </body>
 </html>
 */
+
+
+字体与文本(案例如下)
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>字体样式</title>
+	<style type="text/css">
+		p{
+			font-size: 24px;  /*设置字体大小，还可以使用相对大小em*/
+			font-weight: 100;  /*设置字体粗细，正常normal，粗体bold，更粗bolder，还可以使用100-900的数字*/
+			font-style: italic;  /*设置字体斜体，正常normal，italic字体斜体，oblique斜字体*/
+			font-color:blue;  /*设置字体颜色，颜色格式有通用颜色red,yellow等，十六进制格式#CCC000，RGB格式rgb(0,0,256),rgb(30%,50%,0)，RGBA格式rgba(128,0.256,0.5)-a表示透明度opacity，HSL格式hsl
+			(250,50%,30%)-h色相s饱和度l亮度，HSLA(250,50%,20%,0.3)-同理加透明度a*/
+			font-family: "宋体",Arial,"Times New Roman";  /*设置字体类型*/
+			font-variant:small-caps;  /*设置英文字体大小写，small-caps小型字母大小写，normal正常*/
+		}
+	</style>
+</head>
+
+<body>
+	<div>
+		<h1>巨人的陨落</h1>
+		<p>这本书的作者是肯-弗兰特(ken-fllot)，他还写过小说《凛冬将至》（<span>winter is comming</span>）</p>
+	</div>
+</body>
+</html>
+
