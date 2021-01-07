@@ -486,12 +486,13 @@ h1{
 
 字体与文本(案例如下)
 
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>字体样式</title>
+	<title>字体与文本样式</title>
 	<style type="text/css">
-		p{
+		h1 p{
 			font-size: 24px;  /*设置字体大小，还可以使用相对大小em*/
 			font-weight: 100;  /*设置字体粗细，正常normal，粗体bold，更粗bolder，还可以使用100-900的数字*/
 			font-style: italic;  /*设置字体斜体，正常normal，italic字体斜体，oblique斜字体*/
@@ -500,13 +501,31 @@ h1{
 			font-family: "宋体",Arial,"Times New Roman";  /*设置字体类型*/
 			font-variant:small-caps;  /*设置英文字体大小写，small-caps小型字母大小写，normal正常*/
 		}
+		h2 p{
+			text-align: center;
+			text-decoration-line: underline;
+			text-indent: 2em;
+			text-shadow: 0.1em 0.2em 1em #333;
+			line-height: 1.5em;
+		}
+		h3 p{
+
+		}
+		h3 span{
+			vertical-align: super;
+
+		}
 	</style>
 </head>
 
 <body>
 	<div>
-		<h1>巨人的陨落</h1>
+		<h1>字体样式</h1>
 		<p>这本书的作者是肯-弗兰特(ken-fllot)，他还写过小说《凛冬将至》（<span>winter is comming</span>）</p>
+		<h2>文本样式</h2>
+		<p>我们经常讲的火锅的英文是hot pot，而我们的汉语拼音是huoguo，hot pot is a kind of delicious chinese food.名扬四海的麻辣火锅发源于重庆，而最正宗的就是麻辣毛肚火锅，以厚味重油著称，传统汤汁的配制是选用辣豆瓣、豆豉、 四川甘孜牛油、花椒为原料。食材繁多，如图中所见，包括鲜肉片、海鲜、蔬菜、菌菇等。吃火锅时，最好配上一杯开胃解油的绿茶，便可减轻麻辣的感觉了。 </p>
+		<h3>春晓<span>*李白</span></h3>
+		<p>春眠不觉晓，处处闻啼鸟，夜来风雨声，花落知多少！</p>
 	</div>
 </body>
 </html>
