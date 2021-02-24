@@ -1,1 +1,11 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>学习js</title>
+<>
+</head>
 
+<body>
+</body>
+</html>
